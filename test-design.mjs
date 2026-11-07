@@ -1,0 +1,13 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const html=fs.readFileSync(new URL('./dist/index.html',import.meta.url),'utf8');
+const app=fs.readFileSync(new URL('./dist/app.mjs',import.meta.url),'utf8');
+const css=fs.readFileSync(new URL('./dist/style.css',import.meta.url),'utf8');
+assert.ok(html.includes('class="masthead"'),'new horizontal masthead');
+assert.ok(html.includes('id="navigation"'),'existing navigation ID retained');
+assert.ok(app.includes('campus-scene'),'new original campus illustration');
+assert.ok(app.includes('class="hero-actions"'),'clear primary and secondary actions');
+assert.ok(css.includes('prefers-reduced-motion'),'reduced-motion support');
+assert.ok(css.includes('focus-visible'),'keyboard focus');
+assert.ok(css.includes('safe-area-inset-bottom'),'mobile safe-area navigation');
+for(const id of ['modal','modal-content','content','notification'])assert.ok(html.includes(`id="${id}"`));
+console.log('DESIGN PASS: visual structure, retained interaction anchors, responsive accessibility');
