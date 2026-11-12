@@ -1,6 +1,6 @@
 # 搭把手 · 校园跑腿互助平台
 
-**[打开在线作品 ↗](https://campus-dabashou-20261015.mapletulip512.chatgpt.site/)　·　[产品案例](docs/case-study.md)　·　[简历表述](docs/resume.md)**
+**[打开在线作品 ↗](https://campus-dabashou-20261015.mapletulip512.chatgpt.site/)　·　[产品案例](docs/case-study.md)**
 
 从北门取一个快递，到宿舍楼下交给同学：怎样让两个人都知道任务到了哪一步，又让这次帮助成为下次可以参考的信用记录？
 
